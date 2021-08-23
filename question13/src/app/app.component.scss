@@ -1,0 +1,62 @@
+.container {
+    padding: 1rem;
+}
+
+body > app-root > div > nz-list > nz-spin > div > nz-list-item-meta > div.ant-list-item-meta-avatar > nz-avatar {
+    min-width: 5rem !important;
+}
+
+nz-modal {
+    .container-modal {
+        // background: red;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+
+        .info {
+            padding: 1rem;
+
+            .title-description {
+                font-weight: 600;
+                font-size: 1rem; 
+                margin: 0;   
+            }
+
+            .description {
+                font-size: .75rem;    
+                margin: 0;  
+            }
+
+            .director {
+                font-size: 1rem; 
+
+                b{
+                    font-weight: 600;
+                    font-size: 1rem; 
+                    margin: 0;   
+                }
+
+                strong{
+                    font-weight: 400;
+                    font-size: .9rem;
+                }
+            }
+
+            .genre {
+                font-size: 1rem; 
+
+                b{
+                    font-weight: 600;
+                    font-size: 1rem; 
+                    margin: 0;   
+                }
+
+                strong{
+                    font-weight: 400;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+<div class="container">
+  <nz-list>
+    <nz-list-item *ngFor="let item of movies" (click)="showModal(item)">
+
+      <nz-list-item-meta nzAvatar="{{item.poster}}" nzTitle="{{item.name}} ({{item.year}})"
+        nzDescription="{{item.description}}">
+      </nz-list-item-meta>
+
+      <ul nz-list-item-action><a (click)="showModal(item)">Ver mais</a></ul>
+      
+      <!-- <nz-list-item-extra>
+        <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
+      </nz-list-item-extra> -->
+    </nz-list-item>
+  </nz-list>
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="{{titleModal}}" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <div class="container-modal">
+    <div>
+      <img style="height: 20rem;" [src]="posterModal" alt="Poster">
+    </div>
+
+    <div class="info">
+      <p class="title-description">Descricão</p>
+      <p class="description">{{descriptionModal}}</p>
+
+      <br />
+
+      <p class="director">
+        <b>Diretor</b>
+        <br />
+        <strong>{{directorModal}}</strong>
+      </p>
+
+      <br />
+
+      <p class="genre">
+        <b>Gênero</b>
+        <br />
+        <strong>{{genreModal}}</strong>
+      </p>
+    </div>
+  </div>
+
+</nz-modal>
